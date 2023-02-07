@@ -1,0 +1,310 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    display: grid;
+    grid-template-columns: 200px auto 700px auto;
+    grid-template-rows: auto;
+
+    font-family: 'Roboto', sans-serif;
+    background-color: #EEEEEE;
+
+    height: 100%;
+    
+
+}
+
+/*
+body main {
+
+    overflow: scroll;
+
+}
+*/
+/*
+body aside {
+
+    height: 100%;
+
+}
+*/
+
+/* HEADER */
+main header {
+
+    display: grid;
+    grid-template-columns: 200px auto;
+    grid-template-rows: auto auto auto auto;
+
+}
+
+main header > img {
+
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    grid-template-columns: 1 / 2;
+    grid-template-rows: 1 / 5;
+
+}
+
+/* HEADER */
+main header > div:nth-child(2) {
+
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+
+}
+
+main header > div:nth-child(3) {
+
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+
+}
+
+main header > div:nth-child(4) {
+
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+
+}
+
+main header > div:nth-child(5) {
+
+    grid-column: 2 / 3;
+    grid-row: 4 / 5;
+
+}
+
+main header > div:nth-child(6) {
+
+    grid-column: 1 / 2;
+    grid-row: 5 / 6;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    display: flex;
+    flex-direction: row;
+
+}
+
+main header > div:nth-child(6) img {
+
+    margin-left: 73px;
+
+}
+main header > div:nth-child(6) span {
+
+    margin-left: 50px;
+
+}
+
+/* LATERAL */
+aside {
+
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+
+}
+
+
+/* MENÚ */
+main {
+
+    display: grid;
+    width: 700px;
+    justify-content: center;
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+
+
+}
+
+/*  POSTS - REELS -TAGGED  */
+main > div:nth-child(2) > div:nth-child(1) {
+
+    display: flex;
+    justify-content: center;
+
+
+
+}
+
+main > div:nth-child(2) > div:nth-child(1) img {
+
+    width: 20px;
+    height: 20px;
+    margin-left: 20px;
+    border-radius: 50%;
+
+}
+
+
+/* STORIES */
+main header > div:nth-child(6) img {
+
+    display: flex;
+    width: 20px;
+    height: 20px;
+
+}
+
+main header > div:nth-child(6) > div {
+
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+/*Fotos*/
+main > div > div:nth-child(2) img {
+
+    width: 200px;
+    height: 200px;
+    background: black;
+    object-fit: cover;
+    object-position: top;
+
+    display: grid;
+    grid-template-columns: auto auto auto;
+
+}
+
+main > div > div:nth-child(2) {
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+
+}
+
+
+
+/*Font insert*/
+@font-face {
+    font-family: 'Roboto';
+    src: url("/Roboto/Roboto-Regular.ttf")
+}
+
+
+/*Menú*/
+aside {
+
+    background-color: #FFFFFF;
+    border-right: solid 2px #AAAAAA;
+
+}
+
+aside img {
+
+    width: 30px;
+    height: 30px;
+
+}
+
+/*cambiar*/
+aside > div {
+
+    justify-self: flex-end;
+
+}
+
+aside > h1 {
+
+    position: fixed;
+    margin-left: 10px;
+
+}
+
+aside > nav {
+
+    position: fixed;
+    top: 60px;
+    margin-left: 10px;
+
+}
+
+aside > div {
+
+    position: fixed;
+    bottom: 10px;
+    margin-left: 10px;
+
+}
+
+/*
+aside {
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+}
+*/
+
+body>header {
+    display: none;
+}
+
+body>header img {
+    width: 30px;
+    height: 30px;
+}
+
+@media only screen and (max-width: 600px){
+    aside {
+        display: none;
+    }
+    body > header {
+        display: block;
+    }
+}
+
+body > header #menu-mobile {
+    display: none;
+}
+
+body > header #barra {
+    background-color: blue;
+    padding: 10px;
+}
+
+/*MEDIA*/
+@media only screen and (max-width: 600px){
+    aside {
+        display: none;
+    }
+    body > header {
+        display: block;
+    }
+    body {
+
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+    }
+    header {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+    main {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+    body > header #menu-mobile {
+        display: none;
+    }
+    body > header #barra button:hover {
+        display: block;
+    }
+}
